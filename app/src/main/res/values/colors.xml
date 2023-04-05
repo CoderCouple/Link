@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Colors -->
+    <color name="primary_200">#FFA48C</color>
+    <color name="primary_500">#FF3512</color>
+    <color name="primary_700">#F92406</color>
+    <color name="primary_900">#D30000</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary_200">#70E1F1</color>
+    <color name="secondary_500">#00C0E1</color>
+    <color name="secondary_700">#009BB2</color>
+    <color name="secondary_900">#00646C</color>
+
+    <!-- Writing Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>
