@@ -20,4 +20,5 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+#Facebook Stetho set up
 -keep class com.facebook.stetho.** {*;}
