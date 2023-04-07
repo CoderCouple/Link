@@ -3,6 +3,8 @@ package com.matrix.link.di.components
 import com.matrix.link.LinkApplication
 import com.matrix.link.di.modules.ApplicationModule
 import com.matrix.link.di.modules.NetworkModule
+import com.matrix.link.ui.home.HomeFragment
+import com.matrix.link.ui.landing.LandingActivity
 import com.matrix.link.ui.sample.MainActivity
 import dagger.Component
 import javax.inject.Singleton
@@ -19,4 +21,6 @@ interface ApplicationComponent {
 
     fun inject(app: LinkApplication)
     fun inject(mainActivity: MainActivity)
+    fun inject(homeFragment: HomeFragment)
+    fun inject(landingActivity: LandingActivity)
 }

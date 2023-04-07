@@ -14,7 +14,13 @@
     <color name="secondary_900">#00646C</color>
 
     <!-- Writing Colors -->
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="bottom_item_color_active">#F92406</color>
+    <color name="bottom_item_color_inactive">#000000</color>
+
+
+
 
 </resources>

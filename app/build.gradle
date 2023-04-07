@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
     buildToolsVersion "30.0.3"
 
     kotlinOptions {
@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId "com.matrix.link"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -32,6 +32,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.matrix.link'
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -44,6 +45,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -59,10 +63,11 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}"
 
     // Dagger
-    def daggerVersion = "2.40.5"
+    def daggerVersion = "2.44.2"
     implementation "com.google.dagger:dagger:${daggerVersion}"
     kapt "com.google.dagger:dagger-compiler:${daggerVersion}"
     kapt "com.google.dagger:dagger-android-processor:${daggerVersion}"
+    kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0"
 
     // RxJava
     implementation "io.reactivex.rxjava2:rxjava:2.2.21"
@@ -81,7 +86,7 @@ dependencies {
 
     //Glide Library
     implementation 'com.github.bumptech.glide:glide:4.13.2'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
 
     //Card View
     implementation "androidx.cardview:cardview:1.0.0"
@@ -110,10 +115,13 @@ dependencies {
     //Room
     def room_version = "2.3.0"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
     // optional - RxJava2 support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
 
 }
