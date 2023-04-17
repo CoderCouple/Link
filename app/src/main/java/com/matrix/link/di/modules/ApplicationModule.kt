@@ -8,7 +8,6 @@ import javax.inject.Singleton
 
 @Module
 class ApplicationModule(private val application: LinkApplication) {
-
     @Provides
     @Singleton
     fun getApplication(): Application {

@@ -6,7 +6,6 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class PostRepository @Inject constructor(private val postRxService: PostRxService) {
-
     fun getPosts() : Single<List<Post>> {
         return postRxService.getPosts()
     }

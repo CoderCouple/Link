@@ -6,22 +6,6 @@ import androidx.lifecycle.ViewModelStoreOwner
 import dagger.Lazy
 import javax.inject.Inject
 
-/**
- * A Factory class that reduces the boilerplate to initialize the ViewModel within the Activity or a Fragment.
- * Check for usage examples in this codebase and feel free to copy-paste if it will be necessary.
- *
- * Usage example:
- *
- *    @Inject
- *    lateinit var viewModelFactory: BaseViewModelFactory<StoreFeedViewModel>
- *
- *    private val viewModel: StoreFeedViewModel by lazy {
- *        viewModelFactory.get<StoreFeedViewModel>(
- *            requireActivity()
- *        )
- *    }
- */
-
 class BaseViewModelFactory<T: ViewModel> @Inject constructor(private val viewModel: Lazy<T>) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
@@ -33,7 +17,5 @@ class BaseViewModelFactory<T: ViewModel> @Inject constructor(private val viewMod
     inline fun <reified R: T> get(viewModelStoreOwner: ViewModelStoreOwner): T {
         return ViewModelProvider(viewModelStoreOwner, this)[R::class.java]
     }
-
-
 
 }
