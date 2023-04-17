@@ -1,5 +1,49 @@
 <resources>
     <string name="app_name">Link</string>
-<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Onboarding Screen Strings-->
+    <!-- Titles -->
+    <string name="task_slide_title">Manage Tasks Seamlessly</string>
+    <string name="reminder_slide_title">Adhoc Recurring Reminders</string>
+    <string name="bookmark_slide_title">Bookmark Articles Videos</string>
+    <string name="interactivity_slide_title">Quiz | Polls | Flashcards </string>
+
+    <!-- Descriptions -->
+    <string name="task_slide_description">You can manage all your task in once place. Assign it to actors. Track Progress. Set completion date and mark them done once completed. </string>
+    <string name="reminder_slide_description">Add reminders for important tasks, meetings , dates etc and never miss a single event or deadline.</string>
+    <string name="bookmark_slide_description">Bookmark any digital artifact on internet such as web article, tick tok videos etc and read it later anytime anywhere at your onw pace.</string>
+    <string name="interactivity_slide_description">Create interactive widgets such as quiz, polls ,flashcards etc. in a really intuitive way with just one click. Just one click!</string>
+
+    <!-- Buttons -->
+    <string name="btn_skip">Skip</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_lets_get_started">Lest Get Started</string>
+
+
+    <!-- Home Screen Strings-->
+
+    <!-- Bottom Navigation Menu Strings-->
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="post">Post</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+
+
+    <!-- Welcome Screen Strings-->
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="btn_forgot_password">Forgot Password</string>
+    <string name="btn_remember_me">Remember Me</string>
+    <string name="retailer_heading">Grow Productivity \n Zero To Infinite</string>
+    <string name="retailer_tag_line">We will help you grow your self using our productivity tools &amp; services!</string>
+    <string name="create_account">Create \n Account</string>
+    <string name="how_we_work">How we work?</string>
+
+    <!-- Login Screen -->
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+
 </resources>

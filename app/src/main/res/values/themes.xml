@@ -1,4 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Splash Screen theme -->
+    <style name="Theme.Link.SplashActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <!-- Onboarding Screen theme -->
+    <style name="Theme.Link.OnBoardingActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_700</item>
+        <item name="colorPrimaryVariant">@color/primary_900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_700</item>
+        <item name="colorSecondaryVariant">@color/secondary_900</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
     <!-- Base application theme. -->
     <style name="Theme.Link" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+
+
+    <!---
+    https://lottiefiles.com/34602-infinity-loop
+    https://lottiefiles.com/111240-task
+    https://lottiefiles.com/27730-flashcard-animation
+    https://lottiefiles.com/94101-quad-cube-shifter-2-small-cubes
+    https://lottiefiles.com/99445-wating
+    https://lottiefiles.com/15301-red-bookmark
+    -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/viewPagerImage"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/link_task_list">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:id="@+id/viewPagerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerImage"
+        android:text="@string/task_slide_title"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/brandon_blk"
+        android:gravity="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/viewPagerDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerTitle"
+        android:text="@string/task_slide_description"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:gravity="center">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

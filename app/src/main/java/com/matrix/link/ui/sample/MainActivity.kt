@@ -34,21 +34,9 @@ class MainActivity() : AppCompatActivity(), PostNavigator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        swipeRefreshLayout = findViewById(R.id.swipe_container)
-        swipeRefreshLayout.isEnabled = true
-
-        postViewModel.loadPosts()
-        postViewModel.postLiveData.observe(this) { postResponseList ->
-            adapter.setPostResponseList(postResponseList.toMutableList())
-        }
-
+        setUpViewModel()
         setUpRecyclerView()
-
-        swipeRefreshLayout.setColorSchemeResources(R.color.black);
-        swipeRefreshLayout.setOnRefreshListener({
-            postViewModel.loadPosts()
-            swipeRefreshLayout.setRefreshing(false)
-        })
+        setUpSwipeRefreshLayout()
     }
 
 
@@ -60,7 +48,23 @@ class MainActivity() : AppCompatActivity(), PostNavigator {
         rcv.hasFixedSize()
     }
 
-    override fun navigateToHomePage() {
+    fun setUpSwipeRefreshLayout(){
+        swipeRefreshLayout = findViewById(R.id.swipe_container)
+        swipeRefreshLayout.isEnabled = true
+        swipeRefreshLayout.setColorSchemeResources(R.color.black);
+        swipeRefreshLayout.setOnRefreshListener({
+            postViewModel.loadPosts()
+            swipeRefreshLayout.setRefreshing(false)
+        })
+    }
+
+    fun setUpViewModel(){
+        postViewModel.loadPosts()
+        postViewModel.postLiveData.observe(this) { postResponseList ->
+            adapter.setPostResponseList(postResponseList.toMutableList())
+        }
+    }
+    override fun navigateToHomeActivity() {
         TODO("Not yet implemented")
     }
 

@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "com.matrix.link"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -118,7 +118,13 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
+
+    //multidex
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
+
+    //Splash Screen API
+    def splashScreenVersion = "1.0.0"
+    implementation("androidx.core:core-splashscreen:$splashScreenVersion")
 
 }

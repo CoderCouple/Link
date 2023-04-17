@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/corn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".ui.welcome.WelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/viewPagerImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:elevation="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/zero_to_infinity" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/retailer_heading"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli"
+            android:text="@string/retailer_tag_line"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/primary_900"
+                android:text="@string/btn_sign_in"
+                android:textColor="@color/white"
+                app:cornerRadius="5dp" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/primary_900"
+                android:text="@string/btn_sign_up"
+                android:textColor="@color/white"
+                app:cornerRadius="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:text="@string/how_we_work"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -3,6 +3,7 @@ package com.matrix.link.ui.landing
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.matrix.link.LinkApplication
 import com.matrix.link.R
