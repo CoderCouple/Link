@@ -1,4 +1,4 @@
-package com.matrix.link.ui.account
+package com.matrix.link.ui.meeting
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.matrix.link.R
 
-class AccountFragment : Fragment() {
+class MeetingFragment : Fragment() {
 
     companion object {
-        fun newInstance() = AccountFragment()
+        fun newInstance() = MeetingFragment()
     }
 
-    private lateinit var viewModel: AccountViewModel
+    private lateinit var viewModel: MeetingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_account, container, false)
+        return inflater.inflate(R.layout.fragment_meeting, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AccountViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MeetingViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/white"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/task_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_margin="2dp"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <com.like.LikeButton
+                    android:id="@+id/task_priority_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:icon_size="8dp"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    app:icon_type="star" />
+
+                <TextView
+                    android:id="@+id/task_priority_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Low Priority"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+                <ImageView
+                    android:id="@+id/task_status_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_task_pending_icon" />
+
+                <TextView
+                    android:id="@+id/task_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Pending"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+                <ImageView
+                    android:id="@+id/task_user_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_task_user_icon" />
+
+                <TextView
+                    android:id="@+id/task_user_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="User"
+                    android:textColor="@color/black"
+                    android:layout_margin="2dp"
+                    android:padding="2dp"
+                    android:textSize="15sp" />
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/task_tag_button"-->
+                <!--                    android:layout_width="24dp"-->
+                <!--                    android:layout_height="24dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:padding="2dp"-->
+                <!--                    android:src="@drawable/ic_task_tag_icon" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/task_tag_text"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:text="Tag"-->
+                <!--                    android:layout_margin="2dp"-->
+                <!--                    android:padding="2dp"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="15sp" />-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.matrix.link.ui.reminders
+package com.matrix.link.ui.reminder
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

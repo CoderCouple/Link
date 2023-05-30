@@ -1,7 +1,7 @@
-package com.matrix.link.ui.account
+package com.matrix.link.ui.reminder
 
 import androidx.lifecycle.ViewModel
 
-class AccountViewModel : ViewModel() {
+class ReminderViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

@@ -39,11 +39,48 @@
     <string name="btn_remember_me">Remember Me</string>
     <string name="retailer_heading">Grow Productivity \n Zero To Infinite</string>
     <string name="retailer_tag_line">We will help you grow your self using our productivity tools &amp; services!</string>
-    <string name="create_account">Create \n Account</string>
+    <string name="create_account">Create \nAccount</string>
     <string name="how_we_work">How we work?</string>
 
-    <!-- Login Screen -->
+    <!-- SignIn Screen -->
+    <string name="sign_in"> Sign In</string>
+    <string name="sign_in_forgot_password_text">Forgot Password?</string>
     <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
+    <string name="remember_me">Remember Me</string>
+
+    <string name="btn_create_account">Create Account</string>
+
+    <!-- SignUp Screen -->
+    <string name="sign_up"> Sign In</string>
+
+    <!-- Forgot Password Screen -->
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="forgot_password_detail">Provide your account\'s email for which you want to reset your password!</string>
+    <string name="forgot_password_enter_email">Email</string>
+    <string name="forgot_password_btn_next">Next</string>
+
+
+    <!-- Recovery Selection Screen -->
+    <string name="recovery_selection_text">Make Selection</string>
+    <string name="recovery_selection_detail">Select which  contact details we should use to reset your password?</string>
+    <string name="recovery_selection_via_sms">via sms:</string>
+    <string name="recovery_selection_sms_number">+1 669 249 2259</string>
+    <string name="recovery_selection_via_email">via email:</string>
+    <string name="recovery_selection_email_address">sunil28071987@gmail.com</string>
+
+
+    <!-- New Credential Screen -->
+    <string name="new_credential_text">New Credentials</string>
+    <string name="new_credential_detail">Your identity has been verified. \nPlease set your new password.</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_credential_btn_text_ok">Ok</string>
+
+
+    <!-- Password Update Successful -->
+    <string name="password_update_successful_text">Password Updated</string>
+    <string name="password_update_successful_detail">Your password has been successfully updated!</string>
+
 
 </resources>

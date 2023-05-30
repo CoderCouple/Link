@@ -45,10 +45,11 @@
             android:id="@+id/btnLetsGetStarted"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/primary_900"
-            android:backgroundTint="@color/primary_900"
-            android:text="@string/btn_lets_get_started"
-            android:textColor="#FFFFFF"/>
+            android:textAllCaps="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_rounded_corner"
+            android:textColor="@color/white"
+            android:text="@string/btn_lets_get_started"/>
 
         <LinearLayout
             android:id="@+id/indicatorLayout"

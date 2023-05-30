@@ -64,7 +64,6 @@ class OnBoardingActivity : AppCompatActivity(), OnBoardingNavigator {
                         R.anim.onboarding_button_animation
                     )
                     btnLetsGetStarted.animation = animation
-                    btnLetsGetStarted.setBackgroundColor(resources.getColor(R.color.primary_900))
                     btnLetsGetStarted.visibility = View.VISIBLE
                 } else {
                     btnLetsGetStarted.visibility = View.INVISIBLE
