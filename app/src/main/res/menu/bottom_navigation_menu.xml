@@ -30,10 +30,10 @@
     </item>
 
     <item
-        android:id="@+id/bottom_nav_account"
-        android:icon="@drawable/bottom_nav_account_icon_selector"
+        android:id="@+id/bottom_nav_recorder"
+        android:icon="@drawable/bottom_nav_recorder_icon_selector"
         android:layout_centerVertical="true"
-        android:title="Account">
+        android:title="Recorder">
     </item>
 
 </menu>

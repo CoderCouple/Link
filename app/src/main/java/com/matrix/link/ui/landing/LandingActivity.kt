@@ -62,7 +62,7 @@ class LandingActivity : AppCompatActivity(), LandingNavigator, BottomNavigationV
                 item.isChecked = true
                 return true
             }
-            R.id.bottom_nav_account -> {
+            R.id.bottom_nav_recorder -> {
                 navigateToMeetingsFragment()
                 item.isChecked = true
                 return true
