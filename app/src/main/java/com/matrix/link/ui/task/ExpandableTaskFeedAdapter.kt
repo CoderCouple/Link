@@ -17,14 +17,15 @@ import com.matrix.link.network.model.TaskStatus
 import com.matrix.link.util.TaskUtil
 
 
-class ExpandableTaskFeedAdapter(context: Context,
-                                expandableListTitle: List<Pair<TaskStatus,Int>>,
-                                expandableListDetail: HashMap<TaskStatus, List<Task>>)
-    : BaseExpandableListAdapter() {
+class ExpandableTaskFeedAdapter(
+    context: Context,
+    expandableListTitle: List<Pair<TaskStatus, Int>>,
+    expandableListDetail: HashMap<TaskStatus, List<Task>>
+) : BaseExpandableListAdapter() {
 
-    private lateinit var context: Context
-    private lateinit var expandableListTitle: List<Pair<TaskStatus,Int>>
-    private lateinit var expandableListDetail: HashMap<TaskStatus, List<Task>>
+    private var context: Context
+    private var expandableListTitle: List<Pair<TaskStatus, Int>>
+    private var expandableListDetail: HashMap<TaskStatus, List<Task>>
 
     init {
         this.context = context
@@ -37,7 +38,8 @@ class ExpandableTaskFeedAdapter(context: Context,
     }
 
     override fun getChildrenCount(groupPosition: Int): Int {
-        return this.expandableListDetail.get(this.expandableListTitle.get(groupPosition).first)?.size ?: 0
+        return this.expandableListDetail.get(this.expandableListTitle.get(groupPosition).first)?.size
+            ?: 0
     }
 
     override fun getGroup(groupPosition: Int): Any {
@@ -45,7 +47,8 @@ class ExpandableTaskFeedAdapter(context: Context,
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return this.expandableListDetail.get(this.expandableListTitle.get(groupPosition).first)?.get(childPosition)!!
+        return this.expandableListDetail.get(this.expandableListTitle.get(groupPosition).first)
+            ?.get(childPosition)!!
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -67,19 +70,27 @@ class ExpandableTaskFeedAdapter(context: Context,
         parent: ViewGroup?
     ): View {
         var convertView = convertView
-        val listItem = getGroup(groupPosition) as Pair<TaskStatus,Int>
+        val listItem = getGroup(groupPosition) as Pair<TaskStatus, Int>
         if (convertView == null) {
             val layoutInflater =
                 this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = layoutInflater.inflate(R.layout.layout_task_list_parent_item, null)
         }
 
-        convertView?.setBackgroundColor(Color.parseColor("#FFFFFF"));
-        val listTitleTextView = convertView!!.findViewById<TextView>(R.id.task_expandable_group_heading)
+        //convertView?.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        if (isExpanded) {
+            convertView?.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
+        } else {
+            convertView?.setBackgroundColor(context.getResources().getColor(R.color.white));
+        }
+
+        val listTitleTextView =
+            convertView!!.findViewById<TextView>(R.id.task_expandable_group_heading)
         //listTitleTextView.setTypeface(null, Typeface.BOLD)
         listTitleTextView.text = listItem.first.status
 
-        val listTitleImageView = convertView!!.findViewById<ImageView>(R.id.task_expandable_group_image)
+        val listTitleImageView =
+            convertView!!.findViewById<ImageView>(R.id.task_expandable_group_image)
         listTitleImageView.setImageResource(listItem.second)
 
         return convertView
@@ -102,10 +113,7 @@ class ExpandableTaskFeedAdapter(context: Context,
 
         val tvTaskTitle = convertView!!.findViewById<TextView>(R.id.task_title)
 
-        val btnTaskPriority = convertView.findViewById<LikeButton>(R.id.task_priority_button)
-//        btnTaskPriority.setIcon(IconType.Star)
-//        btnTaskPriority.setIconSizeDp(8)
-
+        val btnTaskPriority = convertView.findViewById<ImageView>(R.id.task_priority_button)
         val tvTaskPriority = convertView.findViewById<TextView>(R.id.task_priority_text)
 
         val ivTaskStatus = convertView.findViewById<ImageView>(R.id.task_status_button)
@@ -116,7 +124,6 @@ class ExpandableTaskFeedAdapter(context: Context,
 
         tvTaskTitle.text = task.title
 
-        btnTaskPriority.isLiked = task.isPriority
         tvTaskPriority.text = TaskUtil.getTaskPriorityLabel(task.isPriority).lowercase()
 
         tvTaskStatus.text = task.status.name.lowercase()

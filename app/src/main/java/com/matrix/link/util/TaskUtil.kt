@@ -29,6 +29,6 @@ object TaskUtil {
 
 
     fun getTaskPriorityLabel(isPriority: Boolean): String {
-        return if (isPriority) TaskPriority.HIGH.name else TaskPriority.LOW.name
+        return if (isPriority) TaskPriority.HIGH.priority else TaskPriority.LOW.priority
     }
 }

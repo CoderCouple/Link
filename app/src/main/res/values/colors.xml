@@ -18,6 +18,9 @@
     <color name="white">#FFFFFF</color>
     <color name="lite_white">#F7F7FF</color>
     <color name="red">#FF0000</color>
+    <color name="light_gray">#d3d3d3</color>
+    <color name="dark_gray">#808080</color>
+
 
     <color name="bottom_item_color_active">#F92406</color>
     <color name="bottom_item_color_inactive">#000000</color>
