@@ -1,7 +1,7 @@
-package com.matrix.link.ui.meeting
+package com.matrix.link.ui.recorder
 
 import androidx.lifecycle.ViewModel
 
-class MeetingViewModel : ViewModel() {
+class RecorderViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

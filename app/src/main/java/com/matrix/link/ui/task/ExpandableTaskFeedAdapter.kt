@@ -1,16 +1,12 @@
 package com.matrix.link.ui.task
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.like.IconType
-import com.like.LikeButton
 import com.matrix.link.R
 import com.matrix.link.network.model.Task
 import com.matrix.link.network.model.TaskStatus
@@ -79,7 +75,7 @@ class ExpandableTaskFeedAdapter(
 
         //convertView?.setBackgroundColor(Color.parseColor("#FFFFFF"));
         if (isExpanded) {
-            convertView?.setBackgroundColor(context.getResources().getColor(R.color.light_gray));
+            convertView?.setBackgroundColor(context.getResources().getColor(R.color.gray_light));
         } else {
             convertView?.setBackgroundColor(context.getResources().getColor(R.color.white));
         }

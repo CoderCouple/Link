@@ -8,11 +8,11 @@ import com.matrix.link.LinkApplication
 import com.matrix.link.R
 import com.matrix.link.ui.bookmarks.BookmarksFragment
 import com.matrix.link.ui.home.HomeFragment
-import com.matrix.link.ui.meeting.MeetingFragment
+import com.matrix.link.ui.recorder.RecorderFragment
 import com.matrix.link.ui.reminder.ReminderFragment
 import com.matrix.link.ui.task.TaskFragment
 
-class LandingActivity : AppCompatActivity(), LandingNavigator, BottomNavigationView.OnNavigationItemSelectedListener {
+class LandingActivity : AppCompatActivity(), LandingNavigator, BottomNavigationView.OnNavigationItemSelectedListener{
 
     private lateinit var bottomNavigationView : BottomNavigationView
 
@@ -104,10 +104,10 @@ class LandingActivity : AppCompatActivity(), LandingNavigator, BottomNavigationV
     }
 
     override fun navigateToMeetingsFragment() {
-        val meetingFragment = MeetingFragment()
+        val meetingFragment = RecorderFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.landing_fragment_container,meetingFragment,
-                MeetingFragment.javaClass.name)
+                RecorderFragment.javaClass.name)
             .commit()
     }
 

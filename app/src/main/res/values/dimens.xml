@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_size">32</dimen>
+    <dimen name="btn_large_size">64</dimen>
+</resources>
